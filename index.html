@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Petrol</title>
+  	<link rel="stylesheet" type="text/css" href="styles.css">
+  	<link rel="manifest" href="manifest.json">
+  	<meta name="application-name" content="Petrol">
+  	<meta name="msapplication-square150x150logo" content="icons/icon150px.png">
+  	<meta name="msapplication-square70x70logo" content="icons/icon75px.png">
+</head>
+
+<body>
+
+<header class="header">
+	<button id="buttonMenu" type="menu" menu="menu" class="headerButton" aria-label="Menu"></button>
+	<h1 id="heading" class="header__title">Petrol</h1>
+	<button id="buttonBack" class="headerButton" aria-label="Back"></button>
+</header>
+
+<main id="main" class="main">
+   <div class="container">
+        <div class="content">
+			<ul id="list" class="list"></ul>
+        </div>
+		<div id='buttonNew' class='round-button'><img src='newButton24px.svg'/></div>
+    </div>
+</main>
+
+<menu type="context" id="menu">
+	<p><menuitem id="import">import</menuitem></p>
+	<p><menuitem id="export">export</menuitem></p>
+</menu>
+
+<div id="importDialog" class="dialog-container">
+	<div class="dialog">
+		<div class="dialog-title">Load from saved file</div>
+		<input type="file" id="fileChooser">
+		<div class="dialog-body">Imported data will replace any records you already have.</div>
+    		<div class="dialog-buttons">
+			<button id="buttonCancelImport" class="button">Cancel</button>
+    		</div>
+	</div>
+</div>
+
+<div id="recordDialog" class="dialog-container">
+    <div class="dialog">
+      <div class="dialog-body">fill up <input type="date" id="dateField"/> with</div>
+	  <div class="dialog-body"><input type="number" id="litresField"/> litres @ <input type='number' id='milesField'/> miles</div>
+      <div class="dialog-buttons">
+	  	<button id="buttonDelete" class="deleteButton">Delete</button>
+	  	<button id="buttonCancel" class="button">Cancel</button>
+      	<button id="buttonSave" class="button">Save</button>  
+      </div>
+	</div>
+</div>
+
+ <script src="script.js" async></script>
+
+</body>
+
+</html>
