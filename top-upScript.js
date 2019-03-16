@@ -182,6 +182,7 @@ function id(el) {
   });
 
   function toggleDialog(d,visible) { // SHOW/HIDE DIALOG
+	id('buttonNew').style.display=(visible)? 'none':'block';
 	if(d == 'importDialog') {
 		if (visible) id("importDialog").classList.add('dialog-container--visible');
 		else id("importDialog").classList.remove('dialog-container--visible');
